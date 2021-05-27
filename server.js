@@ -18,10 +18,16 @@ app.use(upload.array());
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.send('<h1>Home</h1>')
+
+    Contact.find()
+    .then((result) => {
+        
+        res.send(result)
+    });
+    
 });
 
-app.get('/add-contact', (req,res) => {
+app.post('/add-contact', (req,res) => {
     const contact = Contact(req.body)
     contact.save()
     .then(result => {
@@ -47,16 +53,13 @@ app.get('/contacts', (req, res) => {
     });
 });
 
-app.delete('/delete-contact/:email', (req, res) => {
-    const id = req.params.email;
+app.delete('/delete',async (req, res) => {
 
-    Contact.findByIdAndDelete(id)
-    .then(result => {
+    Contact.findByIdAndDelete(req.query.id)
+    .then((result) => {
         res.send(result)
     })
-    .catch(err => {
-        console.log(err);
-    })
+    
 });
 
 
