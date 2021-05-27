@@ -36,7 +36,6 @@ app.get('/', (req, res) => {
 
 app.post('/login', (req, res) => {
     // Example User
-
     const user = {
         id: 1,
         username: 'test',
@@ -77,7 +76,7 @@ app.get('/contacts', authenticate,  (req, res) => {
     });
 });
 
-app.delete('/delete',authenticate,async (req, res) => {
+app.delete('/delete',authenticate, async (req, res) => {
     
     Contact.findByIdAndDelete(req.query.id)
     .then((result) => {
