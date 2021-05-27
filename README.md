@@ -4,5 +4,5 @@
 
 ## Endpoints 
 
-### /add-contact
-### /contacts
+#### /add-contact
+#### /contacts
