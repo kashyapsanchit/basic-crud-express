@@ -13,6 +13,7 @@ mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true})
 
 const app = express();
 
+app.use(express.json())
 app.use('/login', authRoutes)
 app.use('/', contactRoutes)
 
@@ -21,4 +22,5 @@ app.listen(port, () => {
     console.log(`server is listening on port ${port}`);
 });
 
+module.exports = app;
 

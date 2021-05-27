@@ -8,6 +8,7 @@ const jwt = require('jsonwebtoken');
 
 
 router.use(express.urlencoded({extended: true}))
+router.use(express.json())
 router.use(upload.array()); 
 router.use(express.static('public'));
 
