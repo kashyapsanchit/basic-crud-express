@@ -7,15 +7,23 @@
 <h3>
 <ul>
   <li>/ : Base route returns all the data.</li>
+  
   <li>/contacts : Base route returns all the data.<br>
+    
     <ul>
       <li>Without params behaves like base route.</li>
+      
       <li>Query Params you can pass : page, limit.</li>
+      
       <li>You can search through the database using substrings also ( Pass name or email as body ).</li>
     </ul>
+  
   </li>
+  
   <li>/add-contacts : Add contacts to the database.</li>
+  
   <li>/delete : Delete contact given the id as a query param.</li>
+  
   <li>/update : Update contact given the id as a query param and new data as body.</li>
   
 </ul>
