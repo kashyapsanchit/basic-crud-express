@@ -36,11 +36,13 @@ router.post('/add-contact', authenticate, async (req,res) => {
 
 router.get('/contacts', authenticate,  (req, res) => {
 
+    const name = req.query.name 
+    const email = req.query.email 
     const page = req.query.page * 1 || 1;
     const limit = req.query.limit * 1 || 10;
     const skip = (page - 1) * limit;
 
-    Contact.find().skip(skip).limit(10)
+    Contact.find({name: { $regex: name, $options: '$i'}}, {email: { $regex: email, $options: '$i'}}).skip(skip).limit(10)
     .then(result => {
         res.send(result)
     })

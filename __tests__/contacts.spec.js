@@ -17,21 +17,11 @@ describe("Testing the CRUD APIs for contacts", () => {
     // Testing localhost:3000/contacts
     it("tests the /contacts route to list all contacts present in db", async () => {
 
-        const response = await request(app).get('/');
+        const response = await request(app).get('/contacts');
         expect(response.status).toBe(200)
 
     });
 
-    it("tests the /add-contact route to add new contacts to db", async () => {
-
-
-		const response = await request(app).post('/add-contact').send({
-			name: 'Test John',
-			email: 'randomjohn@gmail.com',
-			phone: '5531365132'
-		});
-
-		expect(response.status).toBe(200);
-    })
+    
 
 });
