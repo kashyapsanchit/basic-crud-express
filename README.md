@@ -56,6 +56,6 @@ url: "/update/:id"
 * Delete a contact
 ```sh
 method: "DELETE"
-url: "/server/to-do/set-as-pending/:ID"
+url: "/delete/:id"
 ```
 
