@@ -11,6 +11,11 @@ To get the Node server running locally:
 - `npm start` to start the local server
 
 
+## Dependencies
 
+- [expressjs](https://github.com/expressjs/express) - The server for handling and routing HTTP requests
+- [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) - For generating JWTs used by authentication
+- [mongoose](https://github.com/Automattic/mongoose) - For modeling and mapping MongoDB data to javascript 
+- [jest](https://github.com/facebook/jest) - For running unit and integration tests for APIs 
 
 
