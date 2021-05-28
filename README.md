@@ -1,4 +1,6 @@
-# Basic Implementation of CRUD operations using express.js
+![](https://github.com/EduardoRotundaro/crud-api-express-mongo/blob/master/docs/images/01.png?raw=true)
+
+# Basic Implementation of CRUD operations using express.js and mongoDB
 
 # [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/6cfa069e1b6bf893c40c)
 
