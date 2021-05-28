@@ -20,6 +20,10 @@ To get the Node server running locally:
 - [mongoose](https://github.com/Automattic/mongoose) - For modeling and mapping MongoDB data to javascript 
 - [jest](https://github.com/facebook/jest) - For running unit and integration tests for APIs 
 
+## Deployment
+
+- [AWS EC2 Instance](http://13.234.114.136:3000/) 
+
 
 ## Routes
 
