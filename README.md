@@ -24,6 +24,20 @@ To get the Node server running locally:
 
 - [AWS EC2 Instance](http://13.234.114.136:3000/) 
 
+## Dataset to play around with 
+
+```sh
+{
+        "_id": "60b13e22f22bad3c104324c8",
+        "name": "goku",
+        "email": "goku@saiyan.com",
+        "phone": "635421",
+        "createdAt": "2021-05-28T19:01:54.192Z",
+        "updatedAt": "2021-05-28T19:01:54.192Z",
+        "__v": 0
+}
+```
+
 
 ## Routes
 
