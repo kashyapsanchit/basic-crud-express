@@ -2,32 +2,22 @@
 
 # [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/6cfa069e1b6bf893c40c)
 
-## Endpoints 
+# API endpoints
 
-<h3>
-<ul>
-  <li>/ : Base route returns all the data.</li>
-  
-  <li>/contacts : Base route returns all the data.<br>
-    
-    <ul>
-      <li>Without params behaves like base route.</li>
-      
-      <li>Query Params you can pass : page, limit.</li>
-      
-      <li>You can search through the database using substrings also ( Pass name or email as body ).</li>
-    </ul>
-  
-  </li>
-  
-  <li>/add-contacts : Add contacts to the database.</li>
-  
-  <li>/delete : Delete contact given the id as a query param.</li>
-  
-  <li>/update : Update contact given the id as a query param and new data as body.</li>
-  
-</ul>
-</h3>
+These endpoints allow you to handle Stripe subscriptions for Publish and Analyze.
+
+## GET
+ [/] <br/>
+ [/contacts] <br/>
+
+## POST
+ [/login] <br/>
+ [/add-contact] <br/>
+ [/update] <br/>
+ 
+## DELETE
+ [/delete] <br/>
+___
 
 Installation
 -----------
