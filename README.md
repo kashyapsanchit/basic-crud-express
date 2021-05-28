@@ -29,12 +29,14 @@
 </ul>
 </h3>
 
-<h2>Scripts</h2>
-<h3>
-  <li>npm install</li>
-  <li>npm start</li>
-  <li>npm run test</li>
-</h3>
+Installation
+-----------
+
+```
+npm install 
+npm start
+```
+
 
 <h2>Testing</h2>
 
