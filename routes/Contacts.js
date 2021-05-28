@@ -36,13 +36,13 @@ router.post('/add-contact', authenticate, async (req,res) => {
 
 router.get('/contacts', authenticate,  (req, res) => {
 
-    const name = req.query.name 
-    const email = req.query.email 
+    const name = req.body.name ? req.body.name :  "";
+    const email = req.body.email ? req.body.email : "";
     const page = req.query.page * 1 || 1;
     const limit = req.query.limit * 1 || 10;
     const skip = (page - 1) * limit;
 
-    Contact.find({name: { $regex: name, $options: '$i'}}, {email: { $regex: email, $options: '$i'}}).skip(skip).limit(10)
+    Contact.find({name: { $regex: name, $options: '$i'}, email: {$regex: email, $options: '$i'}}).skip(skip).limit(10)
     .then(result => {
         res.send(result)
     })
@@ -63,17 +63,14 @@ router.delete('/delete',authenticate, async (req, res) => {
 
 router.put('/update',authenticate, async (req, res) => {
 
-    const contact = await Contact.findById(req.query.id)
-    if (contact) {
+        const contact = await Contact.findById(req.query.id)
+    
         contact.name = req.body.name
         contact.email = req.body.email 
         contact.phone = req.body.phone
         const con = await contact.save()
         res.json(con)
-    }
-    else {
-        res.json("Contact not Found !!!")
-    }
+    
    
 })
 

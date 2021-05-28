@@ -1,26 +1,22 @@
 const express = require('express');
-const mongoose = require('mongoose');
-require('dotenv').config()
-const uri = process.env.MONGO_URI;
-const port = process.env.PORT;
+const db = require('./db');
+const bodyParser = require('body-parser');
 const authRoutes = require('./routes/Auth');
-const contactRoutes = require('./routes/Contacts')
-
-mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true})
-.catch((err) => {
-    console.log(err.message);
-});
-
+const contactRoutes = require('./routes/Contacts');
 const app = express();
 
+// app.use(bodyParser.json())
 app.use(express.json())
 app.use('/login', authRoutes)
-app.use('/', contactRoutes)
+app.use(contactRoutes)
 
 
-app.listen(port, () => {
-    console.log(`server is listening on port ${port}`);
-});
+db.connect().then(() => {
+
+    app.listen(3000, () => {
+        console.log(`server is listening on port 3000`);
+    });
+})
 
 module.exports = app;
 
