@@ -19,13 +19,15 @@ These endpoints allow you to handle Stripe subscriptions for Publish and Analyze
  [/delete] <br/>
 ___
 
-Installation
------------
+# Getting started
 
-```
-npm install 
-npm start
-```
+To get the Node server running locally:
+
+- Clone this repo
+- `npm install` to install all required dependencies
+- Install MongoDB Community Edition ([instructions](https://docs.mongodb.com/manual/installation/#tutorials)) and run it by executing `mongod`
+- `npm run dev` to start the local server
+
 
 
 <h2>Testing</h2>
