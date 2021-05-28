@@ -21,3 +21,41 @@ To get the Node server running locally:
 - [jest](https://github.com/facebook/jest) - For running unit and integration tests for APIs 
 
 
+## Routes
+
+* Login to get JWT
+```sh
+method: "POST"
+url: "/login"
+```
+
+* Get all contacts
+```sh
+method: "GET"
+url: "/"
+```
+
+* Add more contacts
+```sh
+method: "PUT"
+url: "/add-contact"
+```
+
+* Search for contacts
+```sh
+method: "PUT"
+url: "/contacts/:id"
+```
+
+* Update a contact
+```sh
+method: "PUT"
+url: "/update/:id"
+```
+
+* Delete a contact
+```sh
+method: "DELETE"
+url: "/server/to-do/set-as-pending/:ID"
+```
+
