@@ -36,8 +36,8 @@ router.post('/add-contact', authenticate, async (req,res) => {
 
 router.get('/contacts', authenticate,  (req, res) => {
 
-    const name = req.body.name ? req.body.name :  " ";
-    const email = req.body.email ? req.body.email : " ";
+    const name = req.body.name ? req.body.name : "";
+    const email = req.body.email ? req.body.email : "";
     const page = req.query.page * 1 || 1;
     const limit = req.query.limit * 1 || 10;
     const skip = (page - 1) * limit;
