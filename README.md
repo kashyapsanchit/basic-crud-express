@@ -26,7 +26,7 @@ To get the Node server running locally:
 
 - [AWS EC2 Instance](http://13.234.114.136:3000/) 
 
-## Onject to play around with 
+## Object to play around with 
 
 ```sh
 {
