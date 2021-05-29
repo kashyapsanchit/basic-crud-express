@@ -11,6 +11,8 @@ To get the Node server running locally:
 - Clone this repo
 - `npm install` to install all required dependencies
 - `npm start` to start the local server
+- `npm run test` to test the endpoints
+
 
 
 ## Dependencies
